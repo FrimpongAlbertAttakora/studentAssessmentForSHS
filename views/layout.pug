@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+ head
+    title students page
+    link(rel='stylesheet' href='/bootstrap.min.css')
+    link(rel='stylesheet' href='/style.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+ body
+    .container-fluid
+        nav.navbar.navbar-expand-lg.bg-dark.navbar-dark.sticky-top
+            a.navbar-brand(href="#") Students Management System
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+              span.navbar-toggler-icon
+            div.collapse.navbar-collapse(id="collapsibleNavbar")
+              ul.navbar-nav.nav-fill
+                li.nav-item
+                  a.nav-link(href="/entry") HOME
+                li.nav-item
+                  a.nav-link(href="/home") BLOG
+                li.nav-item
+                  a.nav-link(href="/admin") ADMIN
+
+        block content
+        
+        footer.bg-dark Albert Attakora Frimpong
+        script(src="/main.js")
+    

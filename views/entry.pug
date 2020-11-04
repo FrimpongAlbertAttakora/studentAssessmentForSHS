@@ -1,0 +1,38 @@
+extends layout
+
+block content
+
+    .container.my-4.bg-light
+        .text-center.text-info.display-4.my-3 STUDENTS RECORD ENTRY
+        div
+            div
+            label(for="") Class:
+               select#nClasses(name="")
+                    option(value="default") -- select --
+                    option(value="1S1") 1S1
+                    option(value="1S2") 1S2
+                    option(value="2S4") 2S4
+            div
+            div
+            form(action="", method="post")
+                div
+                label(for="") Assessment Type:
+                    select(name="")
+                        option(value="default") -- select --
+                        option(value="homework") Homework
+                        option(value="classtest") Class Test
+                        option(value="project") Project
+                        option(value="exams") Exams
+                div
+                label(for="") Subject:
+                    select(name="")
+                        option(value="default") -- select --
+                        option(value="coremaths") Core Maths
+                        option(value="electivemaths") Elective Maths
+                #form_style
+                    h3 Names of Student
+                    h3 Marks
+                #inside
+                    p#inside 
+                .text-center
+                    input(type="submit" value="Send Post" class="btn btn-primary mt-4 mb-5")

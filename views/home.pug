@@ -1,0 +1,7 @@
+extends layout
+block content
+    h1 NAMES OF STUDENTS
+        - const stud = students
+         for student in stud
+            p= student.name 
+            p= student.class 
