@@ -13,26 +13,29 @@ block content
                     option(value="1S2") 1S2
                     option(value="2S4") 2S4
             div
+                label(for="") Subject:
+                    select#subject(name="")
+                        option(value="default") -- select --
+                        option(value="coremaths") Core Maths
+                        option(value="electivemaths") Elective Maths
             div
-            form(action="", method="post")
+            div
+            form(action="/", method="post")
                 div
                 label(for="") Assessment Type:
-                    select(name="")
+                    select(name="type")
                         option(value="default") -- select --
                         option(value="homework") Homework
                         option(value="classtest") Class Test
                         option(value="project") Project
                         option(value="exams") Exams
                 div
-                label(for="") Subject:
-                    select(name="")
-                        option(value="default") -- select --
-                        option(value="coremaths") Core Maths
-                        option(value="electivemaths") Elective Maths
+                label(for="") Total Score:
+                    input#totalScore(type="text", name="total", placeholder="enter marks here!!") 
                 #form_style
                     h3 Names of Student
                     h3 Marks
                 #inside
                     p#inside 
                 .text-center
-                    input(type="submit" value="Send Post" class="btn btn-primary mt-4 mb-5")
+                    input#send(type="submit" value="Send Post" class="btn btn-primary mt-4 mb-5")

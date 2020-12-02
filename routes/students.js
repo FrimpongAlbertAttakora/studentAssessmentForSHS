@@ -198,9 +198,9 @@ router.patch('/assesstype/:studentId/:subjectId', async (req, res) => {
 
 // 12_ ADD AN ASSESSMENT TYPE, TOTAL AND SCORE TO 
 // A SUBJECT FOR A STUDENT (WORKING)
-router.post('/assessupdate_1/:studentId', async (req, res) => {
+router.post('/coremaths/:studentId', async (req, res) => {
     try{
-    const updatedAssessment = await Student.findOneAndUpdate(
+    const updatedAssessment = await Student.findByIdAndUpdate(
         { _id: req.params.studentId }, 
         {$push: 
             {"subject.0.assessment.0.total":req.body.total,
@@ -215,7 +215,7 @@ router.post('/assessupdate_1/:studentId', async (req, res) => {
 });
 
 
-router.post('/assessupdate_2/:studentId', async (req, res) => {
+router.post('/electivemaths/:studentId', async (req, res) => {
     try{
     const updatedAssessment = await Student.findOneAndUpdate(
         { _id: req.params.studentId }, 
